@@ -1,4 +1,7 @@
 site_name: Docs Common
+repo_url: https://github.com/vicmil-work/docs_common
+repo_name: vicmil-work/docs_common
+
 theme:
   name: material
 
