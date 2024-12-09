@@ -14,7 +14,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.47">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
     
     
       
@@ -373,6 +373,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#create-a-new-branch-locally-with-commit-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a new branch locally with commit history
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#push-a-local-branch-to-upstream-if-upstream-branch-does-not-exist" class="md-nav__link">
     <span class="md-ellipsis">
       Push a local branch to upstream if upstream branch does not exist
@@ -385,6 +394,24 @@
   <a href="#overwrite-history-of-remote-repo-with-local-repo" class="md-nav__link">
     <span class="md-ellipsis">
       Overwrite history of remote repo with local repo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#undo-last-commitonly-affecting-git-history-all-files-remain-the-same" class="md-nav__link">
+    <span class="md-ellipsis">
+      Undo last commit(only affecting git history, all files remain the same)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete branch
     </span>
   </a>
   
@@ -443,6 +470,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#create-a-new-branch-locally-with-commit-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a new branch locally with commit history
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#push-a-local-branch-to-upstream-if-upstream-branch-does-not-exist" class="md-nav__link">
     <span class="md-ellipsis">
       Push a local branch to upstream if upstream branch does not exist
@@ -455,6 +491,24 @@
   <a href="#overwrite-history-of-remote-repo-with-local-repo" class="md-nav__link">
     <span class="md-ellipsis">
       Overwrite history of remote repo with local repo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#undo-last-commitonly-affecting-git-history-all-files-remain-the-same" class="md-nav__link">
+    <span class="md-ellipsis">
+      Undo last commit(only affecting git history, all files remain the same)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete branch
     </span>
   </a>
   
@@ -482,11 +536,19 @@
 <h3 id="create-a-new-branch-locally-without-any-commit-history">Create a new branch locally without any commit history</h3>
 <div class="highlight"><pre><span></span><code>git checkout --orphan my_new_branch
 </code></pre></div>
+<h3 id="create-a-new-branch-locally-with-commit-history">Create a new branch locally with commit history</h3>
+<p><code>git checkout --b my_new_branch</code></p>
 <h3 id="push-a-local-branch-to-upstream-if-upstream-branch-does-not-exist">Push a local branch to upstream if upstream branch does not exist</h3>
 <div class="highlight"><pre><span></span><code>git push --set-upstream origin my_new_branch
 </code></pre></div>
 <h3 id="overwrite-history-of-remote-repo-with-local-repo">Overwrite history of remote repo with local repo</h3>
 <div class="highlight"><pre><span></span><code>git push origin my_new_branch --force
+</code></pre></div>
+<h3 id="undo-last-commitonly-affecting-git-history-all-files-remain-the-same">Undo last commit(only affecting git history, all files remain the same)</h3>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>reset<span class="w"> </span>HEAD~1
+</code></pre></div>
+<h3 id="delete-branch">Delete branch</h3>
+<div class="highlight"><pre><span></span><code>git branch -D master
 </code></pre></div>
 
 

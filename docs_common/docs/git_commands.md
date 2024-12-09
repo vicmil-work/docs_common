@@ -31,7 +31,7 @@ git push origin my_new_branch --force
 ### Undo last commit(only affecting git history, all files remain the same)
 
 ```bash
-git reset HEAD~
+git reset HEAD~1
 ```
 
 ### Delete branch
