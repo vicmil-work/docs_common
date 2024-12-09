@@ -1,0 +1,18 @@
+site_name: Docs Common
+theme:
+  name: material
+nav:
+  - Home: index.md
+  - Python Setup: python_setup.md
+  - Python MKDocs: python_docs.md
+  - C++ Standard library: cpp_std.md
+  - C++ Image using stb : cpp_image.md
+  - C++ Graphics using OpenGL : cpp_opengl.md
+  - Git commands: git_commands.md
+markdown_extensions:
+  - codehilite:
+      guess_lang: false  # Ensures correct language highlighting
+  - fenced_code
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - attr_list
