@@ -9,6 +9,8 @@ nav:
   - C++ Image using stb : cpp_image.md
   - C++ Graphics using OpenGL : cpp_opengl.md
   - Git commands: git_commands.md
+  - Server: server_setup.md
+  - VSCode Setup: vscode_setup.md
 markdown_extensions:
   - codehilite:
       guess_lang: false  # Ensures correct language highlighting

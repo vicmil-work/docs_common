@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../cpp_image/">
+        <link rel="prev" href="../git_commands/">
       
       
-        <link rel="next" href="../git_commands/">
+        <link rel="next" href="../vscode_setup/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>C++ Graphics using OpenGL - Docs Common</title>
+        <title>Server - Docs Common</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#graphics-using-opengl" class="md-skip">
+        <a href="#how-to-setup-and-manage-your-own-server" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              C++ Graphics using OpenGL
+              Server
             
           </span>
         </div>
@@ -288,19 +288,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../cpp_opengl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -309,7 +300,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -338,10 +328,28 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../server_setup/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Server
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -350,6 +358,33 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-setup-and-manage-your-own-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to setup and manage your own server
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -391,8 +426,23 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-setup-and-manage-your-own-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to setup and manage your own server
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -407,8 +457,21 @@
                   
 
 
-<h1 id="graphics-using-opengl">Graphics using opengl</h1>
-<p>TODO: Add more documentation</p>
+  <h1>Server</h1>
+
+<h3 id="how-to-setup-and-manage-your-own-server">How to setup and manage your own server</h3>
+<p>Note! This is just one way to do it that I have found to work well</p>
+<p>This method uses</p>
+<ul>
+<li>Amazon lightsail - for cheap server hosting (3.5 - 5$ per month)</li>
+<li>Amazon lambda - to manage the server, such as shutdown when limits are reached (free up to a certain quota per month)</li>
+<li>Cloudflare - for getting a domain, and to protect the server (5$/year for the domain)</li>
+<li>nginx - to setup server routing locally, and for enabling https (free)</li>
+<li>certbot - to install ssl certificate to enable https (free)</li>
+<li>Flask - backend server using python (free)</li>
+</ul>
+<p>Here are some related articles</p>
+<p>How to setup https with certbot: <a href="https://dev.to/yousufbasir/setting-up-nginx-with-certbot-for-https-on-your-web-application-n1i">https://dev.to/yousufbasir/setting-up-nginx-with-certbot-for-https-on-your-web-application-n1i</a></p>
 
 
 
