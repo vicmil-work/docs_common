@@ -1,29 +1,13 @@
-# Documentation for python project setup
-
-## Introduction
-
-This document provides some code for how to setup and start a python project, such as
-
-- Path functionality
-- Creating a virtual environment
-- Downloading things from git
-- Setting up documenation for the project
-
-You can either just copy the parts that you find interesting, or download the following:
-
-- [python_setup.py](../static/python_setup.py){:download="python_setup.py"}
-
-### Enable importing from current directory
-
-```python
 # Add current directory to import path
 import sys, pathlib
 sys.path.append(str(pathlib.Path(__file__).resolve().parents[0]))
-```
 
-### Path Traverse Up
+import os
+from typing import List
+import subprocess, threading
+import platform
+import time
 
-```python
 def path_traverse_up(path: str, count: int) -> str:
     """Traverse the provided path upwards
 
@@ -41,61 +25,36 @@ def path_traverse_up(path: str, count: int) -> str:
     path_raw = str(parents[count].resolve())
     return path_raw.replace("\\", "/")
 
-parent_directory = path_traverse_up(__file__, 1)
-```
 
-### Get directory
-
-```python
 def get_directory(file_path: str):
     return str(pathlib.Path(file_path).parents[0].resolve()).replace("\\", "/")
 
-current_directory = get_directory(__file__)
-```
 
-### Set active directory
-
-```python
 def set_active_directory(path):
     os.chdir(path)
-```
 
-### Clear file
 
-```python
 def clear_file(file_path):
      with open(file_path, "w") as log_file: # Remove any previous contents
         pass
-```
 
-### Ensure directory exists
 
-```python
 def ensure_directory_exists(dir_path):
     os.makedirs(dir_path, exist_ok=True)
-```
 
-### Ensure file exists
 
-```python
 def ensure_file_exists(file_path):
     file_directory = str(pathlib.Path(file_path).parents[0].resolve()).replace("\\", "/")
     os.makedirs(file_directory, exist_ok=True) # Ensure the parent directory exists
     if not os.path.exists(file_path):
         with open(file_path, "w") as _: # Create the file
             pass
-```
 
-### List files in directory
 
-```python
 def list_files_in_directory(dir_path):
     return os.listdir(dir_path)
-```
 
-### Set ssh key for git
 
-```python
 def set_git_ssh_key_path(ssh_key_path): # Set the ssh key for git
     if not os.path.exists(ssh_key_path):
         print("ssh key does not exist!")
@@ -103,11 +62,8 @@ def set_git_ssh_key_path(ssh_key_path): # Set the ssh key for git
     else:
         print("found valid ssh key")
         os.environ["GIT_SSH_COMMAND"] = f"ssh -i {ssh_key_path}"
-```
 
-### Git fetch
 
-```python
 def git_fetch(dir_path, ssh_key_path = None):
     """
     Checks for new updates in the specified directory be doing a git fetch
@@ -123,7 +79,7 @@ def git_fetch(dir_path, ssh_key_path = None):
             else:
                 print("found valid ssh key")
                 os.environ["GIT_SSH_COMMAND"] = f"ssh -i {ssh_key_path}"
-    
+      
         print("git fetch")
         # Fetch the latest changes
         subprocess.run(["git", "fetch"], check=True)
@@ -143,11 +99,8 @@ def git_fetch(dir_path, ssh_key_path = None):
     except Exception as e:
         print(e)
         print("could not fetch updates")
-```
 
-### Git pull
 
-```python
 def git_pull(dir_path, ssh_key_path = None):
     """
     Performs git pull in a directory
@@ -164,11 +117,8 @@ def git_pull(dir_path, ssh_key_path = None):
 
     # Pull the latest changes
     os.system('git pull')
-```
 
-### Git clone
 
-```python
 def git_clone(dir_path, git_repo, ssh_key_path = None):
     os.chdir(dir_path) # Set active directory
     if ssh_key_path:
@@ -180,11 +130,8 @@ def git_clone(dir_path, git_repo, ssh_key_path = None):
             os.environ["GIT_SSH_COMMAND"] = f"ssh -i {ssh_key_path}"
 
     os.system(f'git clone {git_repo}')
-```
 
-### Python virtual environment
 
-```python
 def python_virtual_environment(env_directory_path):
     # Setup a python virtual environmet
     os.makedirs(env_directory_path, exist_ok=True) # Ensure directory exists
@@ -193,11 +140,8 @@ def python_virtual_environment(env_directory_path):
         os.system(f'python -m venv "{env_directory_path}"')
     else:
         os.system(f'python3 -m venv "{env_directory_path}"')
-```
 
-### Python install requirements in virtual environment
 
-```python
 def pip_install_requirements_file_in_virtual_environment(env_directory_path, requirements_path):
     if not os.path.exists(env_directory_path):
         print(f"Invalid path: {env_directory_path}")
@@ -212,11 +156,8 @@ def pip_install_requirements_file_in_virtual_environment(env_directory_path, req
          os.system(f'powershell; &"{env_directory_path}/Scripts/pip" install -r "{requirements_path}"')
     else:
         os.system(f'"{env_directory_path}/bin/pip" install -r "{requirements_path}"')
-```
 
-### Python install packages in virtual environment
 
-```python
 def pip_install_packages_in_virtual_environment(env_directory_path, packages):
     if not os.path.exists(env_directory_path):
         print("Invalid path")
@@ -228,11 +169,8 @@ def pip_install_packages_in_virtual_environment(env_directory_path, packages):
             os.system(f'powershell; &"{env_directory_path}/Scripts/pip" install {package}')
         else:
             os.system(f'"{env_directory_path}/bin/pip" install {package}')
-```
 
-### Subprocess Is Running
 
-```python
 def process_is_running(p: subprocess.Popen):
     if not p:
         return False
@@ -242,11 +180,8 @@ def process_is_running(p: subprocess.Popen):
         return True # The process is running
   
     return False
-```
 
-### Terminate subprocess and all its children
 
-```python
 def terminate_process_and_all_its_children(p: subprocess.Popen):
     import psutil
     pid = p.pid
@@ -263,18 +198,15 @@ def terminate_process_and_all_its_children(p: subprocess.Popen):
             proc.kill()  # Force kill if still alive
     except psutil.NoSuchProcess:
         print(f"Process {pid} does not exist.")
-```
 
-### Invoke python file using subprocess
 
-```python
 def invoke_python_file_using_subprocess(python_env_path: str, file_path: str, logfile_path: str = None) -> subprocess.Popen:
     if not os.path.exists(python_env_path):
         print(f"invalid path: {python_env_path}")
 
     if not os.path.exists(file_path):
         print(f"invalid path: {file_path}")
-  
+      
     current_directory = str(pathlib.Path(file_path).parents[0].resolve()).replace("\\", "/")
     os.chdir(current_directory) # Set active directory to the current directory
 
@@ -293,11 +225,8 @@ def invoke_python_file_using_subprocess(python_env_path: str, file_path: str, lo
 
     new_process = subprocess.Popen(command, shell=True)
     return new_process
-```
 
-### Print logfile in real-time
 
-```python
 def print_logs_loop(log_files: List[str]):
     """Continuously watch multiple log files"""
     if type(log_files) == type(str("")):
@@ -328,10 +257,3 @@ def print_logs_loop(log_files: List[str]):
 def create_log_file_tail_thread(log_files: List[str]):
     print("tail_log_files")
     return threading.Thread(target=print_logs_loop, daemon=True, args=(log_files,)).start();
-```
-
-### Create a server that you can navigate to using the browser
-
-```
-python -m http.server
-```
