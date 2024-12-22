@@ -39,3 +39,8 @@ git reset HEAD~1
 ```
 git branch -D master
 ```
+
+### Generate a new ssh key
+```
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
