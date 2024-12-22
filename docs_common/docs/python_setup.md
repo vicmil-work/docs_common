@@ -335,3 +335,9 @@ def create_log_file_tail_thread(log_files: List[str]):
 ```
 python -m http.server
 ```
+
+### Get the python install directory
+
+```
+python -c "import sys; print(sys.executable)"
+```
