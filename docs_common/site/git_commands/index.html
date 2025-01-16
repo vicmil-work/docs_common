@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
@@ -479,6 +479,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#generate-a-new-ssh-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generate a new ssh key
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#push-local-code-to-new-branch-in-remote-repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Push local code to new branch in remote repo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unstage-files-for-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unstage files for commit
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -616,6 +643,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#generate-a-new-ssh-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generate a new ssh key
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#push-local-code-to-new-branch-in-remote-repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Push local code to new branch in remote repo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unstage-files-for-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unstage files for commit
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -642,7 +696,7 @@
 <div class="highlight"><pre><span></span><code>git checkout --orphan my_new_branch
 </code></pre></div>
 <h3 id="create-a-new-branch-locally-with-commit-history">Create a new branch locally with commit history</h3>
-<p><code>git checkout --b my_new_branch</code></p>
+<p><code>git checkout -b my_new_branch</code></p>
 <h3 id="push-a-local-branch-to-upstream-if-upstream-branch-does-not-exist">Push a local branch to upstream if upstream branch does not exist</h3>
 <div class="highlight"><pre><span></span><code>git push --set-upstream origin my_new_branch
 </code></pre></div>
@@ -654,6 +708,25 @@
 </code></pre></div>
 <h3 id="delete-branch">Delete branch</h3>
 <div class="highlight"><pre><span></span><code>git branch -D master
+</code></pre></div>
+<h3 id="generate-a-new-ssh-key">Generate a new ssh key</h3>
+<div class="highlight"><pre><span></span><code>ssh-keygen -t ed25519 -C &quot;your_email@example.com&quot;
+</code></pre></div>
+<h3 id="push-local-code-to-new-branch-in-remote-repo">Push local code to new branch in remote repo</h3>
+<p>Create git repo</p>
+<div class="highlight"><pre><span></span><code>git init
+</code></pre></div>
+<p>Create a new branch that you would like to push</p>
+<div class="highlight"><pre><span></span><code>git checkout -b my_new_branch
+</code></pre></div>
+<p>Set the repo to be connected to the remote repo you would like to push to</p>
+<div class="highlight"><pre><span></span><code>git remote add origin https://github.com/my_git_repo_to_use
+</code></pre></div>
+<p>Push the code to the remote repo and create a new remote branch</p>
+<div class="highlight"><pre><span></span><code>git push -u origin my_new_branch
+</code></pre></div>
+<h3 id="unstage-files-for-commit">Unstage files for commit</h3>
+<div class="highlight"><pre><span></span><code>git restore --staged &lt;file&gt;
 </code></pre></div>
 
 
@@ -704,7 +777,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
   </body>

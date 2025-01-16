@@ -14,7 +14,7 @@ git checkout --orphan my_new_branch
 
 ### Create a new branch locally with commit history
 
-`git checkout --b my_new_branch`
+`git checkout -b my_new_branch`
 
 ### Push a local branch to upstream if upstream branch does not exist
 
@@ -41,6 +41,39 @@ git branch -D master
 ```
 
 ### Generate a new ssh key
+
 ```
 ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+
+### Push local code to new branch in remote repo
+
+Create git repo
+
+```
+git init
+```
+
+Create a new branch that you would like to push
+
+```
+git checkout -b my_new_branch
+```
+
+Set the repo to be connected to the remote repo you would like to push to
+
+```
+git remote add origin https://github.com/my_git_repo_to_use
+```
+
+Push the code to the remote repo and create a new remote branch
+
+```
+git push -u origin my_new_branch
+```
+
+### Unstage files for commit
+
+```
+git restore --staged <file>
 ```

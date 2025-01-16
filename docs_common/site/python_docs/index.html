@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
@@ -662,8 +662,8 @@
 <div class="highlight"><pre><span></span><code>pip install mkdocs, mkdocs-material, pymdown-extensions
 </code></pre></div>
 <h3 id="mkdocs-new-project">MKDocs new project</h3>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">mkdocs_new</span><span class="p">(</span><span class="n">project_name</span><span class="p">):</span>
-    <span class="kn">from</span> <span class="nn">mkdocs.utils</span> <span class="kn">import</span> <span class="n">write_file</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">mkdocs_new</span><span class="p">(</span><span class="n">project_name</span><span class="p">):</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">mkdocs.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">write_file</span>
     <span class="c1"># Create the project directory and docs directory</span>
     <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">project_name</span><span class="p">,</span> <span class="s2">&quot;docs&quot;</span><span class="p">),</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
@@ -681,7 +681,7 @@
 </code></pre></div>
 <h3 id="mkdocs-serve-project">MKDocs serve project</h3>
 <p>Makes it so you can view the project in the browser if you navigate to "http://127.0.0.1:8000"</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">serve_mkdocs_project</span><span class="p">(</span><span class="n">config_file</span><span class="o">=</span><span class="s2">&quot;mkdocs.yml&quot;</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8000</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">serve_mkdocs_project</span><span class="p">(</span><span class="n">config_file</span><span class="o">=</span><span class="s2">&quot;mkdocs.yml&quot;</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8000</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Serve an MkDocs project locally.</span>
 
@@ -690,7 +690,7 @@
 <span class="sd">        host (str): Host address to bind the server (default: 127.0.0.1).</span>
 <span class="sd">        port (int): Port number to serve the site (default: 8000).</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span> <span class="nn">mkdocs.commands.serve</span> <span class="kn">import</span> <span class="n">serve</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">mkdocs.commands.serve</span><span class="w"> </span><span class="kn">import</span> <span class="n">serve</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="c1"># Start the MkDocs development server directly with the configuration file</span>
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Serving MkDocs at http://</span><span class="si">{</span><span class="n">host</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">port</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -700,8 +700,8 @@
 </code></pre></div>
 <h3 id="go-to-url">Go to url</h3>
 <p>Opens the webbrowser with the provided url</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">go_to_url</span><span class="p">(</span><span class="n">url</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-    <span class="kn">import</span> <span class="nn">webbrowser</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">go_to_url</span><span class="p">(</span><span class="n">url</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">webbrowser</span>
     <span class="n">webbrowser</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">new</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">autoraise</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="mkdocs-launch-example">Mkdocs launch example</h3>
@@ -722,9 +722,9 @@
 </code></pre></div>
 <h3 id="build-mkdocs">Build MKdocs</h3>
 <p>Builds it into html files that can be hosted as a server</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">build_mkdocs_documentation</span><span class="p">(</span><span class="n">config_file</span><span class="o">=</span><span class="s2">&quot;mkdocs.yml&quot;</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="kn">from</span> <span class="nn">mkdocs.config</span> <span class="kn">import</span> <span class="n">load_config</span>
-    <span class="kn">from</span> <span class="nn">mkdocs.commands.build</span> <span class="kn">import</span> <span class="n">build</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">build_mkdocs_documentation</span><span class="p">(</span><span class="n">config_file</span><span class="o">=</span><span class="s2">&quot;mkdocs.yml&quot;</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">mkdocs.config</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_config</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">mkdocs.commands.build</span><span class="w"> </span><span class="kn">import</span> <span class="n">build</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Build MkDocs documentation into a static site.</span>
 
@@ -810,7 +810,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
   </body>
