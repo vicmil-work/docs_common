@@ -1,3 +1,3 @@
 # Graphics using opengl
 
-TODO: Add more documentation
+You can install sdl on linux using: sudo apt-get install libsdl2-2.0-0
