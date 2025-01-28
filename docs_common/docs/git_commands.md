@@ -68,6 +68,7 @@ git remote add origin https://github.com/my_git_repo_to_use
 
 Add a commit
 ```
+git add -A
 git commit -m "add initial code"
 ```
 
