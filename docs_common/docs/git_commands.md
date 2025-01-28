@@ -66,6 +66,11 @@ Set the repo to be connected to the remote repo you would like to push to
 git remote add origin https://github.com/my_git_repo_to_use
 ```
 
+Add a commit
+```
+git commit -m "add initial code"
+```
+
 Push the code to the remote repo and create a new remote branch
 
 ```
