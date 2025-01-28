@@ -77,3 +77,9 @@ git push -u origin my_new_branch
 ```
 git restore --staged <file>
 ```
+
+### Mark file as deleted that was previously tracked(does not change the local file, only the commit)
+
+```
+git update-index --remove <file>
+```
