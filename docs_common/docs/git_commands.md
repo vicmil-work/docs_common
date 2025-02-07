@@ -89,3 +89,9 @@ git restore --staged <file>
 ```
 git update-index --remove <file>
 ```
+
+### Pull down all submodules in repo
+(downloads the dependencies as it was when it was pushed)
+```
+git submodule update --init --recursive
+```
