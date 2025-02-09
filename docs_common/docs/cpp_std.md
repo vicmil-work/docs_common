@@ -19,8 +19,11 @@ And if you are using powershell, you can just add it to the current path
 $env:Path = "C:\msys64\ucrt64\bin;" + $env:Path
 ```
 
-You may also want to install the following:
-[https://github.com/meganz/mingw-std-threads](https://github.com/meganz/mingw-std-threads) - enable threading for mingw
+Or add at to your global path by heading to 
+settings -> system -> about -> advanced system settings -> environment variables -> system variables -> Path -> edit -> New
+
+If you downloaded mingw using some other method, you may also want to install the following if there is problems with threads:
+[https://github.com/meganz/mingw-std-threads](https://github.com/meganz/mingw-std-threads) - enable threading for mingw if it is missing threading support
 
 ### Setting up c++ compiler on linux
 For linux, the setup is rather trivial. just run the following commands:
