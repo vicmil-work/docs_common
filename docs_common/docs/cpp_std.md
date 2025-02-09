@@ -28,6 +28,10 @@ For linux, the setup is rather trivial. just run the following commands:
 sudo apt install build-essential
 ```
 
+### Setting up c++ compiler for targetting the web
+Just install emscripten using the following tutorial:
+https://emscripten.org/docs/getting_started/downloads.html
+
 ### Cross-platform headers
 
 ```C++
