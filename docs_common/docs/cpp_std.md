@@ -10,10 +10,23 @@ You can either just copy the parts that you find interesting, or download the fo
 - [cpp_build_example.py](../static/cpp_build_example.py){:download="cpp_build_example.py"}
 
 
-Some other files that might be nice to have
+### Setting up a c++ compiler on windows
+You can download mingw64 on windows using the following tutorial:
+https://code.visualstudio.com/docs/cpp/config-mingw
 
+And if you are using powershell, you can just add it to the current path
+```
+$env:Path = "C:\msys64\ucrt64\bin;" + $env:Path
+```
+
+You may also want to install the following:
 - [mingw-std-threads.zip](../static/mingw-std-threads.zip){:download="mingw-std-threads.zip"} - enable threading for mingw, originally from: [https://github.com/meganz/mingw-std-threads](https://github.com/meganz/mingw-std-threads)
-- [mingw64.zip](https://drive.google.com/uc?export=download&id=1c70TxJa-suU7zaHb6gPNA_b5yBunhCOo){:download="mingw64.zip"} - c++ compiler for windows
+
+### Setting up c++ compiler on linux
+For linux, the setup is rather trivial. just run the following commands:
+```
+sudo apt install build-essential
+```
 
 ### Cross-platform headers
 
