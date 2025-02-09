@@ -20,7 +20,7 @@ $env:Path = "C:\msys64\ucrt64\bin;" + $env:Path
 ```
 
 You may also want to install the following:
-- [mingw-std-threads.zip](../static/mingw-std-threads.zip){:download="mingw-std-threads.zip"} - enable threading for mingw, originally from: [https://github.com/meganz/mingw-std-threads](https://github.com/meganz/mingw-std-threads)
+[https://github.com/meganz/mingw-std-threads](https://github.com/meganz/mingw-std-threads) - enable threading for mingw
 
 ### Setting up c++ compiler on linux
 For linux, the setup is rather trivial. just run the following commands:
