@@ -141,6 +141,8 @@ server {
 }
 ```
 
-### How to set up a ssl certificate for ssh traffic:
+### How to set up a ssl certificate for ssh traffic
 
 https://github.com/vicmil-pip/vicmil-pip-python-packages/tree/pyCertBot
+
+### How to set up autentication
