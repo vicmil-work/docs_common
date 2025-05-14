@@ -257,3 +257,11 @@ def print_logs_loop(log_files: List[str]):
 def create_log_file_tail_thread(log_files: List[str]):
     print("tail_log_files")
     return threading.Thread(target=print_logs_loop, daemon=True, args=(log_files,)).start();
+
+if __name__ == "__main__":
+    # Activate environment
+    # windows: ./.venv/scripts/activate.bat
+    # linux: source .venv/bin/activate
+    python_virtual_environment(get_directory(__file__) + "/.venv")
+    pip_install_requirements_file_in_virtual_environment(env_directory_path=get_directory(__file__) + "/.venv",
+                                                         requirements_path=get_directory(__file__) + "/requirements.txt")

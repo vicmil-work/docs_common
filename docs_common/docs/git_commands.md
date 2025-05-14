@@ -67,6 +67,7 @@ git remote add origin https://github.com/my_git_repo_to_use
 ```
 
 Add a commit
+
 ```
 git add -A
 git commit -m "add initial code"
@@ -91,7 +92,15 @@ git update-index --remove <file>
 ```
 
 ### Pull down all submodules in repo
+
 (downloads the dependencies as it was when it was pushed)
+
 ```
 git submodule update --init --recursive
+```
+
+### Pull down branch into separate folder
+
+```
+git worktree add <path> <branch_name>
 ```

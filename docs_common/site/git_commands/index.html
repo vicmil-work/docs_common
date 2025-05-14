@@ -515,6 +515,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#pull-down-all-submodules-in-repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pull down all submodules in repo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pull-down-branch-into-separate-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pull down branch into separate folder
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -688,6 +706,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#pull-down-all-submodules-in-repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pull down all submodules in repo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pull-down-branch-into-separate-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pull down branch into separate folder
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -740,10 +776,10 @@
 <p>Set the repo to be connected to the remote repo you would like to push to</p>
 <div class="highlight"><pre><span></span><code>git remote add origin https://github.com/my_git_repo_to_use
 </code></pre></div>
-<p>Add a commit
+<p>Add a commit</p>
 <div class="highlight"><pre><span></span><code>git add -A
 git commit -m &quot;add initial code&quot;
-</code></pre></div></p>
+</code></pre></div>
 <p>Push the code to the remote repo and create a new remote branch</p>
 <div class="highlight"><pre><span></span><code>git push -u origin my_new_branch
 </code></pre></div>
@@ -752,6 +788,14 @@ git commit -m &quot;add initial code&quot;
 </code></pre></div>
 <h3 id="mark-file-as-deleted-that-was-previously-trackeddoes-not-change-the-local-file-only-the-commit">Mark file as deleted that was previously tracked(does not change the local file, only the commit)</h3>
 <div class="highlight"><pre><span></span><code>git update-index --remove &lt;file&gt;
+</code></pre></div>
+<h3 id="pull-down-all-submodules-in-repo">Pull down all submodules in repo</h3>
+<p>(downloads the dependencies as it was when it was pushed)</p>
+<div class="highlight"><pre><span></span><code>git submodule update --init --recursive
+</code></pre></div>
+<h3 id="pull-down-branch-into-separate-folder">Pull down branch into separate folder</h3>
+<p>(downloads the dependencies as it was when it was pushed)</p>
+<div class="highlight"><pre><span></span><code>git worktree add &lt;path&gt; &lt;branch_name&gt;
 </code></pre></div>
 
 

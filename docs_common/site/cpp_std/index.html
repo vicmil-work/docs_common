@@ -357,6 +357,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#setting-up-a-c-compiler-on-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting up a c++ compiler on windows
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-c-compiler-on-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting up c++ compiler on linux
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-c-compiler-for-targetting-the-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting up c++ compiler for targetting the web
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#cross-platform-headers" class="md-nav__link">
     <span class="md-ellipsis">
       Cross-platform headers
@@ -707,6 +734,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#setting-up-a-c-compiler-on-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting up a c++ compiler on windows
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-c-compiler-on-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting up c++ compiler on linux
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-c-compiler-for-targetting-the-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting up c++ compiler for targetting the web
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#cross-platform-headers" class="md-nav__link">
     <span class="md-ellipsis">
       Cross-platform headers
@@ -949,11 +1003,23 @@
 <li><a download="util_std_example.cpp" href="../static/util_std_example.cpp">util_std_example.cpp</a></li>
 <li><a download="cpp_build_example.py" href="../static/cpp_build_example.py">cpp_build_example.py</a></li>
 </ul>
-<p>Some other files that might be nice to have</p>
-<ul>
-<li><a download="mingw-std-threads.zip" href="../static/mingw-std-threads.zip">mingw-std-threads.zip</a> - enable threading for mingw, originally from: <a href="https://github.com/meganz/mingw-std-threads">https://github.com/meganz/mingw-std-threads</a></li>
-<li><a download="mingw64.zip" href="https://drive.google.com/uc?export=download&amp;id=1c70TxJa-suU7zaHb6gPNA_b5yBunhCOo">mingw64.zip</a> - c++ compiler for windows</li>
-</ul>
+<h3 id="setting-up-a-c-compiler-on-windows">Setting up a c++ compiler on windows</h3>
+<p>You can download mingw64 on windows using the following tutorial:
+https://code.visualstudio.com/docs/cpp/config-mingw</p>
+<p>And if you are using powershell, you can just add it to the current path
+<div class="highlight"><pre><span></span><code>$env:Path = &quot;C:\msys64\ucrt64\bin;&quot; + $env:Path
+</code></pre></div></p>
+<p>Or add at to your global path by heading to 
+settings -&gt; system -&gt; about -&gt; advanced system settings -&gt; environment variables -&gt; system variables -&gt; Path -&gt; edit -&gt; New</p>
+<p>If you downloaded mingw using some other method, you may also want to install the following if there is problems with threads:
+<a href="https://github.com/meganz/mingw-std-threads">https://github.com/meganz/mingw-std-threads</a> - enable threading for mingw if it is missing threading support</p>
+<h3 id="setting-up-c-compiler-on-linux">Setting up c++ compiler on linux</h3>
+<p>For linux, the setup is rather trivial. just run the following commands:
+<div class="highlight"><pre><span></span><code>sudo apt install build-essential
+</code></pre></div></p>
+<h3 id="setting-up-c-compiler-for-targetting-the-web">Setting up c++ compiler for targetting the web</h3>
+<p>Just install emscripten using the following tutorial:
+https://emscripten.org/docs/getting_started/downloads.html</p>
 <h3 id="cross-platform-headers">Cross-platform headers</h3>
 <div class="highlight"><pre><span></span><code><span class="cm">/**</span>
 <span class="cm"> * These are a list of **most** cross-platform c++11 headers</span>
